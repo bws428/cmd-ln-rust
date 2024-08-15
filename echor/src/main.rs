@@ -24,7 +24,8 @@ fn main() {
         )
         .get_matches();
 
-    // let text = matches.values_of_lossy("text").unwrap();
+    let text: Vec<String> = matches.get_many("text").unwrap().cloned().collect();
+    let omit_newline = matches.get_flag("omit_newline");
 
-    println!("{:#?}", matches)
+    print!("{}{}", text.join(" "), if omit_newline { "" } else { "\n" });
 }
