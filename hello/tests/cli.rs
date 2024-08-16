@@ -1,6 +1,5 @@
 use assert_cmd::Command;
-
-fn main() {}
+use predicates::prelude::*;
 
 #[test]
 fn runs() {
