@@ -7,6 +7,7 @@ use clap::Parser;
 #[command(author, version, about)]
 
 /// A Rust version of the `echo` utility
+// is this even working right yet?
 struct Args {
     /// Input text
     #[arg(required(true))]
